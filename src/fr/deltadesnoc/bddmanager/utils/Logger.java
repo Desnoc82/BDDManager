@@ -24,7 +24,7 @@ public class Logger {
 		StringBuilder builder = new StringBuilder();
 		builder.append("[").append(this.name).append("]");
 		
-		String datePattern = "DD/MM/YYYY HH:mm:ss";
+		String datePattern = "dd/MM/YYYY HH:mm:ss";
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern);
 		String date = dateFormat.format(new Date(System.currentTimeMillis()));

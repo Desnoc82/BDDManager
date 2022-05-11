@@ -22,5 +22,9 @@ public class Manager {
         }
 		
 	}
+	
+	public static Logger getLogger() {
+		return logger;
+	}
 
 }

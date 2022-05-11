@@ -1,5 +1,6 @@
 package fr.deltadesnoc.bddmanager.ui;
 
+import fr.deltadesnoc.bddmanager.database.DataBase;
 import fr.deltadesnoc.bddmanager.ui.panel.IPanel;
 import fr.deltadesnoc.bddmanager.ui.panels.includes.TopPanel;
 import fr.deltadesnoc.bddmanager.utils.ResizeHelper;
@@ -14,6 +15,7 @@ import javafx.stage.StageStyle;
 public class PanelManager {
 	
 	private final BDDLauncher launcher;
+	private DataBase dataBase;
 	private final Stage stage;
     private GridPane layout;
     private TopPanel topPanel = new TopPanel();
@@ -25,6 +27,7 @@ public class PanelManager {
     }
 
     public void init(){
+    	dataBase = new DataBase();
         this.stage.setTitle("BDD Manager");
         this.stage.setMinWidth(1280);
         this.stage.setWidth(1280);
@@ -62,5 +65,6 @@ public class PanelManager {
 
     public Stage getStage() { return stage; }
     public BDDLauncher getLauncher() { return launcher; }
+    public DataBase getDataBase() { return dataBase; }
     public TopPanel getTopPanel() { return topPanel; }
 }
